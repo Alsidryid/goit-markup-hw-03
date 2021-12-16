@@ -52,7 +52,7 @@ body {
 }
 .link {
   text-decoration: none;
-  display: inline-block;
+  display: block;
 }
 .section {
   padding-top: 94px;
@@ -85,6 +85,8 @@ body {
   letter-spacing: 0.02em;
   color: var(--main-text-color);
   text-decoration: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .navig-link:hover {
   color: var(--secondary-color);
@@ -113,8 +115,6 @@ body {
 .headr > .container {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 .navigation {
   display: flex;
@@ -138,9 +138,10 @@ body {
 .hero {
   text-align: center;
   background-color: var(--hero-foot-color);
+  padding: 200px 0;
 }
 .hero > .container {
-  padding: 200px 0;
+  padding: 0 0;
 }
 .hero-title {
   font-weight: 900;
@@ -180,15 +181,13 @@ body {
 }
 
 /* Наши плюсы */
-.services-title {
-  display: none;
-}
+
 .services-list {
   display: flex;
   align-items: center;
 }
 .services-list-content {
-  max-width: 270px;
+  width: 270px;
 }
 .services-list-content:not(:last-child) {
   margin-right: 30px;
@@ -222,6 +221,9 @@ body {
 .our-job-list {
   display: flex;
 }
+.oj-list-content {
+  width: 370px;
+}
 .oj-list-content:not(:last-child) {
   margin-right: 30px;
 }
@@ -245,6 +247,8 @@ body {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  width: 270px;
 }
 .list-content-team:not(:last-child) {
   margin-right: 30px;
@@ -311,8 +315,21 @@ body {
   color: var(--secondary-color);
 }
 /* Категории */
-.categories-title {
-  display: none;
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .secondary-butns {
@@ -350,6 +367,7 @@ body {
 .categorie {
   margin-right: 30px;
   margin-bottom: 30px;
+  width: 370px;
 }
 .categorie-box {
   border: 1px solid var(--categorie-color);
